@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mini_app_bank/routes/app_routes.dart';
 
 part 'onborading_screen_binding.dart';
 part 'onborading_screen_controller.dart';
@@ -27,7 +28,7 @@ class OnboradingScreenView extends GetView<OnboradingScreenController> {
             image: AssetImage("assets/imgs/background_image.png"),
             fit: BoxFit.fill,
             colorFilter: ColorFilter.mode(
-              Colors.purple.withOpacity(0.6),
+              Colors.purple.shade400,
               BlendMode.srcATop,
             ),
           ),
@@ -194,41 +195,46 @@ class OnboradingScreenView extends GetView<OnboradingScreenController> {
                   ),
                 ),
                 Spacer(),
-                Container(
-                  width: double.infinity,
-                  alignment: Alignment.centerLeft,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Row(
-                      children: [
-                        Text(
-                          "GET STARTED",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w900,
-                            color: Color(0xFFCCA2C9),
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed(AppRoutes.login);
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    alignment: Alignment.centerLeft,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.white,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Row(
+                        children: [
+                          Text(
+                            "GET STARTED",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900,
+                              color: Color(0xFFCCA2C9),
+                            ),
                           ),
-                        ),
-                        Spacer(),
-                        Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFCCA2C9),
-                            borderRadius: BorderRadius.circular(25),
+                          Spacer(),
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFCCA2C9),
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Icon(
+                              Icons.arrow_outward_sharp,
+                              size: 38,
+                              color: Colors.white,
+                            ),
                           ),
-                          child: Icon(
-                            Icons.arrow_outward_sharp,
-                            size: 38,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
