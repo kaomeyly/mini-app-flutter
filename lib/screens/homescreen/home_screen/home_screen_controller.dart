@@ -1,9 +1,5 @@
 part of 'home_screen_view.dart';
 
 class HomeScreenController extends GetxController {
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  var value = 100.0.obs;
 }
