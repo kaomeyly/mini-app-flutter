@@ -188,7 +188,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                     fontWeight: FontWeight.normal,
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 15),
                 RichText(
                   text: TextSpan(
                     children: [
@@ -211,6 +211,24 @@ class HomeScreenView extends GetView<HomeScreenController> {
                     ],
                   ),
                 ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        child: Row(children: [Text("Income")]),
+                      ),
+                    ),
+                    SizedBox(width: 5),
+                    Expanded(
+                      flex: 2,
+                      child: OutlinedButton(onPressed: () {}, child: Text("")),
+                    ),
+                  ],
+                ),
+                // SizedBox(height: 10),
               ],
             ),
           ),

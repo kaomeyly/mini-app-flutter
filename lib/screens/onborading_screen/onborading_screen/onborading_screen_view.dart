@@ -111,6 +111,7 @@ class OnboradingScreenView extends GetView<OnboradingScreenController> {
 
   Widget _buildFooter2() {
     return Column(
+      
       children: [
         Container(
           width: double.infinity,
