@@ -28,7 +28,7 @@ class OnboradingScreenView extends GetView<OnboradingScreenController> {
             image: AssetImage("assets/imgs/background_image.png"),
             fit: BoxFit.fill,
             colorFilter: ColorFilter.mode(
-              Colors.purple.shade400,
+              Colors.purple.shade00,
               BlendMode.srcATop,
             ),
           ),
