@@ -28,7 +28,7 @@ class OnboradingScreenView extends GetView<OnboradingScreenController> {
             image: AssetImage("assets/imgs/background_image.png"),
             fit: BoxFit.fill,
             colorFilter: ColorFilter.mode(
-              Colors.purple.shade00,
+              Colors.purple.shade500,
               BlendMode.srcATop,
             ),
           ),
@@ -111,7 +111,6 @@ class OnboradingScreenView extends GetView<OnboradingScreenController> {
 
   Widget _buildFooter2() {
     return Column(
-      
       children: [
         Container(
           width: double.infinity,
